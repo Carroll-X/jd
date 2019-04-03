@@ -1,0 +1,204 @@
+/* 方便开发使用* 上线的时候把常见有间距标签改一下就好了 */
+* {
+  margin: 0;
+  padding: 0;
+  /* 给所有元素设置这个盒模型属性为了让盒模型的和设置的宽度一样 
+   因为移动端做全屏页面宽度100% 如果因为边框或者padding导致超出范围出现滚动条不利于用户体验 */
+  box-sizing: border-box;
+  /* 设置移动端点击高亮背景色  去掉就设置为透明颜色即可*/
+  -webkit-tap-highlight-color: transparent;
+  /* 设置文字允许字体小于12px; */
+  -webkit-text-size-adjust: none;
+  /* 防止文字的锯齿样式 */
+  -webkit-font-smoothing: antialiased;
+}
+/* 给body设置字体默认样式 */
+html {
+  font-size: 26.6667vw;
+}
+body {
+  background: #fff;
+  font-size: .14rem;
+  height: 100vh;
+}
+a {
+  text-decoration: none;
+  color: #666;
+}
+li {
+  list-style: none;
+}
+input {
+  border: 0;
+  outline: none;
+}
+img {
+  /* 解决图片底部3px间隙问题 */
+  vertical-align: middle;
+}
+i {
+  /* 去掉斜体 */
+  font-style: normal;
+}
+#header {
+  width: 100%;
+  height: 0.45rem;
+  background-color: #f5f5f5;
+  border: 0.01rem solid #e5e5e5;
+  display: flex;
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 999;
+}
+#header .left,
+#header .right {
+  width: 0.4rem;
+  height: 0.4rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#header .left a,
+#header .right a {
+  width: 0.2rem;
+  height: 0.2rem;
+  background: url('../images/sprites.png') -0.2rem 0;
+  background-size: 2rem 2rem;
+}
+#header .center {
+  flex: 1;
+}
+#header .center form {
+  position: relative;
+}
+#header .center form .icon-search {
+  width: 0.2rem;
+  height: 0.2rem;
+  position: absolute;
+  top: 0.13rem;
+  left: 0.06rem;
+  background: url('../images/sprites.png') -0.58rem -1.1rem;
+  background-size: 2rem 2rem;
+}
+#header .center form input {
+  width: 100%;
+  height: 0.3rem;
+  margin-top: 0.07rem;
+  font-size: 0.14rem;
+  border-radius: 0.15rem;
+  padding-left: 0.3rem;
+}
+#header .right a {
+  background: url('../images/sprites.png') -0.6rem 0;
+  background-size: 2rem 2rem;
+}
+#main {
+  width: 100%;
+  height: 100vh;
+  padding-top: 0.45rem;
+  padding-bottom: 0.5rem;
+  display: flex;
+  overflow: hidden;
+}
+#main .left {
+  width: 0.85rem;
+  height: 100%;
+  background-color: #f8f8f8;
+}
+#main .left .swiper-container {
+  width: 100%;
+  height: 100vh;
+}
+#main .left .swiper-container .swiper-slide {
+  height: auto;
+}
+#main .left .swiper-container .swiper-slide ul li {
+  height: .46rem;
+  display: flex;
+}
+#main .left .swiper-container .swiper-slide ul li a {
+  width: 100%;
+  height: 100%;
+  line-height: .46rem;
+  text-align: center;
+}
+#main .left .swiper-container .swiper-slide ul li a:hover {
+  background-color: #fff;
+}
+#main .right {
+  flex: 1;
+  background-color: #fff;
+  padding: .05rem;
+}
+#main .right .swiper-container {
+  height: 100%;
+}
+#main .right .swiper-container .swiper-slide {
+  height: auto;
+}
+#main .right .swiper-container .swiper-slide .banner img {
+  width: 100%;
+}
+#main .right .swiper-container .swiper-slide #branchList {
+  width: 100%;
+}
+#main .right .swiper-container .swiper-slide #branchList .jd-brand {
+  width: 100%;
+}
+#main .right .swiper-container .swiper-slide #branchList .jd-brand h4 {
+  line-height: .4rem;
+}
+#main .right .swiper-container .swiper-slide #branchList .jd-brand .jd-category-style-1 {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+#main .right .swiper-container .swiper-slide #branchList .jd-brand .jd-category-style-1 li {
+  width: 33.3%;
+}
+#main .right .swiper-container .swiper-slide #branchList .jd-brand .jd-category-style-1 li a {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+#main .right .swiper-container .swiper-slide #branchList .jd-brand .jd-category-style-1 li a img {
+  width: .7rem;
+}
+#main .right .swiper-container .swiper-scrollbar {
+  width: .03rem;
+  background-color: rgba(255, 0, 0, 0.1);
+}
+#main .right .swiper-container .swiper-scrollbar .swiper-scrollbar-drag {
+  background-color: rgba(255, 0, 0, 0.5);
+}
+#footer {
+  width: 100%;
+  height: 0.5rem;
+  background-color: #fff;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  z-index: 999;
+}
+#footer ul {
+  display: flex;
+}
+#footer ul li {
+  width: 25%;
+  display: flex;
+}
+#footer ul li a {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#footer ul li a img {
+  height: 0.5rem;
+}

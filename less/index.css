@@ -1,0 +1,400 @@
+/* 引入base.less文件*/
+/* 方便开发使用* 上线的时候把常见有间距标签改一下就好了 */
+* {
+  margin: 0;
+  padding: 0;
+  /* 给所有元素设置这个盒模型属性为了让盒模型的和设置的宽度一样 
+   因为移动端做全屏页面宽度100% 如果因为边框或者padding导致超出范围出现滚动条不利于用户体验 */
+  box-sizing: border-box;
+  /* 设置移动端点击高亮背景色  去掉就设置为透明颜色即可*/
+  -webkit-tap-highlight-color: transparent;
+  /* 设置文字允许字体小于12px; */
+  -webkit-text-size-adjust: none;
+  /* 防止文字的锯齿样式 */
+  -webkit-font-smoothing: antialiased;
+}
+/* 给body设置字体默认样式 */
+html {
+  font-size: 26.6667vw;
+}
+body {
+  background: #fff;
+  font-size: .14rem;
+  height: 100vh;
+}
+a {
+  text-decoration: none;
+  color: #666;
+}
+li {
+  list-style: none;
+}
+input {
+  border: 0;
+  outline: none;
+}
+img {
+  /* 解决图片底部3px间隙问题 */
+  vertical-align: middle;
+}
+i {
+  /* 去掉斜体 */
+  font-style: normal;
+}
+#header {
+  width: 100%;
+  height: 0.4rem;
+  display: flex;
+  position: fixed;
+  top: 0;
+  z-index: 999;
+}
+#header .left {
+  width: 0.8rem;
+  height: 0.4rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#header .left .icon-logo {
+  width: 0.6rem;
+  height: 0.23rem;
+  /* 图片缩小两倍   原图 400px*400px */
+  background-image: url('../images/sprites.png');
+  background-position: 0 -1.1rem;
+  background-size: 2rem 2rem;
+}
+#header .center {
+  flex: 1;
+}
+#header .center form {
+  position: relative;
+  padding: 0.05rem 0;
+}
+#header .center form .icon-search {
+  position: absolute;
+  top: 0.1rem;
+  left: 0.06rem;
+  width: 0.21rem;
+  height: 0.21rem;
+  background: url('../images/sprites.png');
+  background-position: -0.58rem -1.1rem;
+  background-size: 2rem 2rem;
+}
+#header .center form input {
+  width: 100%;
+  height: 0.3rem;
+  border-radius: 0.15rem;
+  padding-left: 0.3rem;
+  font-size: 0.14rem;
+}
+#header .right {
+  width: 0.5rem;
+  height: 0.4rem;
+  text-align: center;
+  line-height: 0.4rem;
+}
+#header .right a {
+  color: #fff;
+}
+#slide img {
+  width: 100%;
+}
+#nav {
+  height: 1.6rem;
+  width: 100%;
+}
+#nav ul {
+  display: flex;
+  flex-wrap: wrap;
+}
+#nav ul li {
+  width: 25%;
+  margin-top: 0.1rem;
+}
+#nav ul li a {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+#nav ul li a img {
+  width: 0.4rem;
+  margin-bottom: 0.05rem;
+  align-content: center;
+}
+#nav ul li a p {
+  font-size: 0.14rem;
+}
+#main {
+  width: 100vw;
+  height: 10rem;
+  padding: 0.2rem 0.1rem 0;
+  background-color: #eee;
+}
+#main .seckill {
+  width: 100%;
+  height: 1.98rem;
+  background-color: #fff;
+  border: 0.01rem solid #e5e5e5;
+}
+#main .seckill .title {
+  height: 0.3rem;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 0.05rem;
+}
+#main .seckill .title .left {
+  display: flex;
+  align-items: center;
+}
+#main .seckill .title .left img {
+  width: 0.2rem;
+  height: 0.25rem;
+  margin-top: 0.02rem;
+  margin-right: 0.1rem;
+}
+#main .seckill .title .left > span {
+  font-size: 0.14rem;
+  margin-right: 0.1rem;
+  color: #cc332a;
+}
+#main .seckill .title .left .downtime {
+  display: flex;
+}
+#main .seckill .title .left .downtime span {
+  width: 0.15rem;
+  height: 0.15rem;
+  background-color: #000;
+  text-align: center;
+  line-height: 0.15rem;
+  color: #fff;
+  margin: 0 0.02rem;
+}
+#main .seckill .title .left .downtime span:nth-child(3n) {
+  width: 0.1rem;
+  color: #000;
+  background-color: #fff;
+  margin: 0;
+}
+#main .seckill .title .right a {
+  line-height: 0.3rem;
+}
+#main .seckill .content {
+  width: 100%;
+}
+#main .seckill .content ul {
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+#main .seckill .content ul li {
+  flex: 1;
+}
+#main .seckill .content ul li a {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+#main .seckill .content ul li a img {
+  display: flex;
+  justify-content: center;
+  width: 1.1rem;
+  margin-top: 0.05rem;
+}
+#main .seckill .content ul li a span {
+  color: #cc332a;
+  margin-top: 0.05rem;
+}
+#main .seckill .content ul li a del {
+  color: #ccc;
+}
+#main .jd_super1 {
+  width: 100%;
+  background-color: #fff;
+  margin-top: 0.09rem;
+  border: 0.01rem solid #e5e5e5;
+}
+#main .jd_super1 .title {
+  height: 0.3rem;
+  font-size: 0.15rem;
+  display: flex;
+  align-items: center;
+  padding-left: 0.1rem;
+}
+#main .jd_super1 .title i {
+  width: 0.04rem;
+  height: 0.15rem;
+  margin-right: 0.05rem;
+  background-color: #cc332a;
+}
+#main .jd_super1 .content {
+  display: flex;
+  border-top: 0.01rem solid #ccc;
+}
+#main .jd_super1 .content .left {
+  flex: 1;
+}
+#main .jd_super1 .content .left a {
+  display: block;
+  width: 100%;
+}
+#main .jd_super1 .content .left a img {
+  width: 100%;
+  height: 100%;
+}
+#main .jd_super1 .content .right {
+  flex: 1;
+  border-left: 0.01rem solid #ccc;
+}
+#main .jd_super1 .content .right .up {
+  width: 100%;
+  border-bottom: 0.01rem solid #ccc;
+  display: block;
+}
+#main .jd_super1 .content .right .up img {
+  width: 100%;
+  height: 100%;
+}
+#main .jd_super1 .content .right .down {
+  display: block;
+  width: 100%;
+}
+#main .jd_super1 .content .right .down img {
+  width: 100%;
+  height: 100%;
+}
+#main .jd_super2 {
+  width: 100%;
+  background-color: #fff;
+  margin-top: 0.09rem;
+  border: 0.01rem solid #e5e5e5;
+}
+#main .jd_super2 .title {
+  height: 0.3rem;
+  font-size: 0.15rem;
+  display: flex;
+  align-items: center;
+  padding-left: 0.1rem;
+}
+#main .jd_super2 .title i {
+  width: 0.04rem;
+  height: 0.15rem;
+  margin-right: 0.05rem;
+  background-color: #cc332a;
+}
+#main .jd_super2 .content {
+  display: flex;
+  border-top: 0.01rem solid #ccc;
+}
+#main .jd_super2 .content .left {
+  flex: 1;
+  border-right: 0.01rem solid #ccc;
+}
+#main .jd_super2 .content .left .up {
+  width: 100%;
+  border-bottom: 0.01rem solid #ccc;
+  display: block;
+}
+#main .jd_super2 .content .left .up img {
+  width: 100%;
+  height: 100%;
+}
+#main .jd_super2 .content .left .down {
+  width: 100%;
+  display: block;
+}
+#main .jd_super2 .content .left .down img {
+  width: 100%;
+  height: 100%;
+}
+#main .jd_super2 .content .right {
+  flex: 1;
+}
+#main .jd_super2 .content .right a {
+  display: block;
+}
+#main .jd_super2 .content .right a img {
+  width: 100%;
+  height: 100%;
+}
+#main .jd_super3 {
+  width: 100%;
+  background-color: #fff;
+  margin-top: 0.09rem;
+  border: 0.01rem solid #e5e5e5;
+}
+#main .jd_super3 .title {
+  height: 0.3rem;
+  font-size: 0.15rem;
+  display: flex;
+  align-items: center;
+  padding-left: 0.1rem;
+}
+#main .jd_super3 .title i {
+  width: 0.04rem;
+  height: 0.15rem;
+  margin-right: 0.05rem;
+  background-color: #cc332a;
+}
+#main .jd_super3 .content {
+  display: flex;
+  border-top: 0.01rem solid #ccc;
+}
+#main .jd_super3 .content .left {
+  flex: 1;
+}
+#main .jd_super3 .content .left a {
+  display: block;
+  width: 100%;
+}
+#main .jd_super3 .content .left a img {
+  width: 100%;
+  height: 100%;
+}
+#main .jd_super3 .content .right {
+  flex: 1;
+  border-left: 0.01rem solid #ccc;
+}
+#main .jd_super3 .content .right .up {
+  width: 100%;
+  border-bottom: 0.01rem solid #ccc;
+  display: block;
+}
+#main .jd_super3 .content .right .up img {
+  width: 100%;
+  height: 100%;
+}
+#main .jd_super3 .content .right .down {
+  display: block;
+  width: 100%;
+}
+#main .jd_super3 .content .right .down img {
+  width: 100%;
+  height: 100%;
+}
+#footer {
+  width: 100%;
+  background-color: #fff;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+}
+#footer ul {
+  display: flex;
+}
+#footer ul li {
+  flex: 1;
+}
+#footer ul li a {
+  display: block;
+  width: 100%;
+  text-align: center;
+}
+#footer ul li a img {
+  height: 0.5rem;
+}

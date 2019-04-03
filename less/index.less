@@ -1,0 +1,448 @@
+/* 引入base.less文件*/
+
+@import 'base.less';
+
+#header {
+    width: 100%;
+    height: 0.4rem; // background: linear-gradient(to bottom, rgba(0, 0, 0, .5), rgba(0, 0, 0, 0));
+    display: flex;
+    position: fixed;
+    top: 0;
+    z-index: 999;
+
+    .left {
+        width: 0.8rem;
+        height: 0.4rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        .icon-logo {
+            width: 0.6rem;
+            height: 0.23rem;
+            /* 图片缩小两倍   原图 400px*400px */
+            background-image: url('../images/sprites.png');
+            background-position: 0 -1.1rem;
+            background-size: 2rem 2rem;
+        }
+    }
+
+    .center {
+        flex: 1;
+
+        form {
+            position: relative;
+            padding: 0.05rem 0;
+
+            .icon-search {
+                position: absolute;
+                top: 0.1rem;
+                left: 0.06rem;
+                width: 0.21rem;
+                height: 0.21rem;
+                background: url('../images/sprites.png');
+                background-position: -0.58rem -1.1rem;
+                background-size: 2rem 2rem
+            }
+
+            input {
+                width: 100%;
+                height: 0.3rem;
+                border-radius: 0.15rem;
+                padding-left: 0.3rem;
+                font-size: 0.14rem;
+            }
+        }
+    }
+
+    .right {
+        width: 0.5rem;
+        height: 0.4rem;
+        text-align: center;
+        line-height: 0.4rem;
+
+        a {
+            color: #fff;
+        }
+    }
+}
+
+// 轮播图
+#slide {
+    img {
+        width: 100%;
+    }
+}
+
+//导航区域
+#nav {
+    height: 1.6rem;
+    width: 100%;
+
+    ul {
+        display: flex;
+        flex-wrap: wrap;
+
+        li {
+            width: 25%;
+            margin-top: 0.1rem;
+
+            a {
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+
+                img {
+                    width: 0.4rem;
+                    margin-bottom: 0.05rem;
+                    align-content: center;
+                }
+
+                p {
+                    font-size: @main-font-size;
+                }
+            }
+        }
+    }
+}
+
+//主体区域
+#main {
+    width: 100%;
+    height: 10rem;
+    padding: 0.2rem 0.1rem 0;
+    background-color: #eee; //秒杀区域
+
+    .seckill {
+        width: 100%;
+        height: 1.98rem;
+        background-color: #fff;
+        border: 0.01rem solid #e5e5e5; //秒杀标题
+
+        .title {
+            height: 0.3rem;
+            display: flex;
+            justify-content: space-between;
+            padding: 0 0.05rem;
+
+            .left {
+                display: flex;
+                align-items: center;
+
+                img {
+                    width: 0.2rem;
+                    height: 0.25rem;
+                    margin-top: 0.02rem;
+                    margin-right: 0.1rem;
+                }
+
+                >span {
+                    font-size: @main-font-size;
+                    margin-right: 0.1rem;
+                    color: @main-color;
+                }
+
+                .downtime {
+                    display: flex;
+
+                    span {
+                        width: 0.15rem;
+                        height: 0.15rem;
+                        background-color: #000;
+                        text-align: center;
+                        line-height: 0.15rem;
+                        color: #fff;
+                        margin: 0 0.02rem;
+
+                        &:nth-child(3n) {
+                            width: 0.1rem;
+                            color: #000;
+                            background-color: #fff;
+                            margin: 0;
+                        }
+                    }
+                }
+            }
+
+            .right {
+                a {
+                    line-height: 0.3rem;
+                }
+            }
+        }
+
+        //秒杀内容
+        .content {
+            width: 100%;
+
+            ul {
+                display: flex;
+                align-items: center; // justify-content: center;
+
+                li {
+                    flex: 1;
+
+                    a {
+                        width: 100%;
+                        height: 100%;
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: center;
+                        align-items: center;
+
+                        img {
+                            display: flex;
+                            justify-content: center;
+                            width: 1.1rem;
+                            margin-top: 0.05rem;
+                        }
+
+                        span {
+                            color: @main-color;
+                            margin-top: 0.05rem;
+                        }
+
+                        del {
+                            color: #ccc;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    //京东超市区域1
+    .jd_super1 {
+        width: 100%; // height: 2.26rem;
+        background-color: #fff;
+        margin-top: 0.09rem;
+        border: 0.01rem solid #e5e5e5;
+
+        .title {
+            height: 0.3rem; // border-bottom:0.01rem solid #ccc;
+            font-size: 0.15rem;
+            display: flex;
+            align-items: center;
+            padding-left: 0.1rem;
+
+            i {
+                width: 0.04rem;
+                height: 0.15rem;
+                margin-right: 0.05rem;
+                background-color: @main-color;
+            }
+        }
+
+        .content {
+            display: flex; // height: 1.95rem;
+            border-top: 0.01rem solid #ccc;
+
+            .left {
+                flex: 1;
+
+                a {
+                    display: block;
+                    width: 100%;
+
+                    img {
+                        width: 100%;
+                        height: 100%;
+                    }
+                }
+            }
+
+            .right {
+                flex: 1;
+                border-left: 0.01rem solid #ccc;
+
+                .up {
+                    width: 100%; // height: 0.99rem;
+                    border-bottom: 0.01rem solid #ccc;
+                    display: block;
+
+                    img {
+                        width: 100%;
+                        height: 100%;
+                    }
+                }
+
+                .down {
+                    display: block;
+                    width: 100%; // height: 0.95rem;
+
+                    img {
+                        width: 100%;
+                        height: 100%;
+                    }
+                }
+            }
+        }
+    }
+
+    //京东超市区域2
+    .jd_super2 {
+        width: 100%; // height: 2.26rem;
+        background-color: #fff;
+        margin-top: 0.09rem;
+        border: 0.01rem solid #e5e5e5;
+
+        .title {
+            height: 0.3rem; // border-bottom:0.01rem solid #ccc;
+            font-size: 0.15rem;
+            display: flex;
+            align-items: center;
+            padding-left: 0.1rem;
+
+            i {
+                width: 0.04rem;
+                height: 0.15rem;
+                margin-right: 0.05rem;
+                background-color: @main-color;
+            }
+        }
+
+        .content {
+            display: flex; // height: 1.95rem;
+            border-top: 0.01rem solid #ccc;
+
+            .left {
+                flex: 1;
+                border-right: 0.01rem solid #ccc;
+
+                .up {
+                    width: 100%; // height: 0.99rem;
+                    border-bottom: 0.01rem solid #ccc;
+                    display: block;
+
+                    img {
+                        width: 100%;
+                        height: 100%;
+                    }
+                }
+
+                .down {
+                    width: 100%; // height: 0.95rem;
+                    display: block;
+
+                    img {
+                        width: 100%;
+                        height: 100%;
+                    }
+                }
+            }
+
+            .right {
+                flex: 1;
+
+                a {
+                    display: block;
+
+                    img {
+                        width: 100%;
+                        height: 100%;
+                    }
+                }
+
+            }
+        }
+    }
+
+    //京东超市区域3
+    .jd_super3 {
+        width: 100%; // height: 2.26rem;
+        background-color: #fff;
+        margin-top: 0.09rem;
+        border: 0.01rem solid #e5e5e5;
+
+        .title {
+            height: 0.3rem; // border-bottom:0.01rem solid #ccc;
+            font-size: 0.15rem;
+            display: flex;
+            align-items: center;
+            padding-left: 0.1rem;
+
+            i {
+                width: 0.04rem;
+                height: 0.15rem;
+                margin-right: 0.05rem;
+                background-color: @main-color;
+            }
+        }
+
+        .content {
+            display: flex; // height: 1.95rem;
+            border-top: 0.01rem solid #ccc;
+
+            .left {
+                flex: 1;
+
+                a {
+                    display: block;
+                    width: 100%;
+
+                    img {
+                        width: 100%;
+                        height: 100%;
+                    }
+                }
+            }
+
+            .right {
+                flex: 1;
+                border-left: 0.01rem solid #ccc;
+
+                .up {
+                    width: 100%; // height: 0.99rem;
+                    border-bottom: 0.01rem solid #ccc;
+                    display: block;
+
+                    img {
+                        width: 100%;
+                        height: 100%;
+                    }
+                }
+
+                .down {
+                    display: block;
+                    width: 100%; // height: 0.95rem;
+
+                    img {
+                        width: 100%;
+                        height: 100%;
+                    }
+                }
+            }
+        }
+    }
+}
+
+#footer {
+    // height: 0.5rem;
+    width: 100%;
+    background-color: #fff;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+
+    ul {
+        display: flex;
+
+        li {
+            flex: 1;
+
+            a {
+                display: block;
+                width: 100%;
+                text-align: center;
+
+                img {
+                    // width: 100%;
+                    height: 0.5rem;
+                }
+
+            }
+        }
+    }
+}
